@@ -1,0 +1,274 @@
+<!-- 
+In an HTML file you can write things that the browser totally ignores. 
+These are called "comments" and are purely for humans.
+
+A comment starts with these characters < ! - -
+and ends with these characters - - >
+
+Look at the start and end of this comment to see how its done.
+
+This HTML file is well commented or even over commented so as 
+to explain everything for your benefit.
+
+If you removed all the comments, the final rendered page would not change at all.
+
+Another IMPORTANT point is that "white space" that means spaces and new lines that you 
+put in an HTML file don't normally effect what appears in the browser at all.
+Everything is reformatted by the browser based on the layout blocks.
+
+You will see that HTML is constructed of different blocks (officially called "elements"
+but since a block can be composed of sub-blocks "elements" seems to be the wrong word.
+
+Blocks start a bit like this <blockname> and end a bit like this </blockname>.
+You will see below. Some short blocks are a bit like this <blockname    />
+You will see that blocks can contain other blocks so 
+-->
+
+
+<!DOCTYPE html>              <!--This tells the browser its HTML--> 
+<html lang="en">             <!--Marks the start of the "html" block and it's for an English audience-->
+             								 <!--The end of the "html" block you can see at the end of this file </html> -->
+
+
+
+
+	<!--The "head" block has some vital information to tell the browser how to render the page-->
+	<head>                         <!--Marks the start of the head block-->
+	<title>Tutorial0-0</title>      <!--This is a title for the tab that appears on your browser when you view the page-->
+	<meta charset="iso-8859-1" />  <!--This is about the binary representation of the characters and need not be understood-->
+	<!--<link href="style.css" rel="stylesheet" type="text/css" />-->   <!--This tells the browser where to find the CSS file-->
+	</head>                        <!--Marks the end of the head block-->
+
+
+
+
+	<!--<body>                     <!--Marks the start of the body block which contains all the stuff that actually appears on the page-->
+	<body>
+
+
+		<p>
+(This is how this web-page does look on your web-browser but without the CSS file that 
+gives it all it's style. What you see are the default styles of your browser.) 
+		</p>
+
+
+			<!--This is a heading block, h1 is the strongest heading style 
+			available, h2, h3, h4 etc. are progressively smaller headings-->
+			<h1>Web Works</h1>
+
+			<nav><!--What is between these tags is for navigation so this tells search engines to pay attention-->
+				<ul>                                                          <!--This starts an Unordered List block-->
+					<li><a href="../htmlcss.html">Back to A Flying Start in HTML and CSS</a></li>  <!--The first thing on the list-->
+					<li><a href="indexgreen.html">Green Screen</a></li>         <!--The second thing on the list-->
+					<li><a href="indexatari.html">Atari 1040st</a></li>         <!--The third thing on the list-->
+					<li><a href="indexnocss.html">No CSS</a></li>               <!--The fourth thing on the list-->
+					<li><a href="index.html">Decent CSS</a></li>                <!--The fifth thing on the list-->
+				</ul>                                                         <!--This ends an Unrdered List block-->
+			</nav><!--end of a navigation block-->
+			<!--Above are links to other pages like <a href="indexatari.html">Atari 1040st</a> -->
+
+
+			<h1>Tutorial 0-0: Start HTML & CSS</h1>
+			<p><!--This starts a paragraph block-->
+In this tutorial 0-0 we take the first step in understanding HTML and CSS.
+			</p><p><!--This ends a paragraph block and starts a new paragraph block. It doesn't matter that they are on the same line!-->
+Before looking at the HTML and CSS files for this page, its worth reading it to 
+understand some of the history of HTML if you haven't already.
+			</p><p>
+			</p><!--This ends a paragraph block-->
+
+			<ul>                                                                                          <!--This starts an Unordered List block-->
+				<li><a href="../tutorial0-1/index.html">Next Tutorial 0-1: Add a Title and Picture</a></li> <!--The first thing on the list-->
+				<!--<li><a href="../tutorial1-0/index.html">Next Series of Tutorials 1-0</a></li>-->        <!--The second thing on the list-->
+			</ul>                                                                                         <!--This ends an Unrdered List block-->
+
+
+		<h2>Download the files</h2>
+		<p>
+The files underlying these web-pages are specially created so as to be clear and so as to serve as the material from which you can start to learn. 
+		</p><p>  
+You can take the underlying files and make changes to them to see the effects of those changes.
+	 	</p><p>
+By changing the text and the images to be your own you will start to create your own web-page and finally your own web-site. 
+		</p><p>
+The HTML for this page is contained in a file called "index.html". There is a second file called "style.css" which determines the layout style of this page. Both files are intended for you to look at and learn from. There is no Javascript for this page. The html and css files can be downloaded as a Zip File for every tutorial so you can work on them yourself. You can <a href="../tutorial0-0.txt">Download Zip Files for this tutorial</a> just by clicking the link. However what you will get is a file with the extension .txt which your browser will probably display as complete garbage! You must save the page but change the extension from .txt to .zip You can then deal with the file in the same way as you would handle with any .zip file on your computer. (This fuss is because newer browsers won't let you download .zip files from non-https web sites.)  
+		</p><p>
+		</p>
+
+
+
+		<h2>Edit the files and browse them</h2>
+
+		<p>
+Files ending .html, .css and .js can be opened in a simple text editor to look at and edit. 
+		</p><p>
+Files ending .html can be dragged and dropped on a browser to see the web pages they 
+represent. 
+		</p><p>
+I normally have an editor open and a browser at the same time, showing the page, so I can edit 
+a file save it and then refresh the browser to see the results of my changes on the page.
+I suggest you work the same way.
+		</p><p>
+Some editors interpret HTML and work a bit like web browsers. You need an editor that just shows you the 
+plain text or you won't see all the HTML tags properly. Though if your editor has "syntax highlighting" that 
+will help you a lot.
+		</p><p>
+Files can be downloaded as a Zip File for every tutorial, so you can work on them yourself. All files are extensively commented and I would recommend removing some of the comments once you understand what they are explaining. After all these comments are there for teaching. Once you understand the points they explain then you should reduce the comments to only what is necessary for someone who has already learned what is needed.
+		</p>
+
+
+
+
+<!--Recall that "white space" that means spaces and new lines that you 
+put in an HTML file don't normally effect what appears in the browser at all.
+Everything is reformatted by the browser based on the layout blocks. 
+The two paragraphs above illustrate this point. The HTML is formated quite 
+differently but what appears in the browser is remarkably similar.-->
+
+
+
+
+			<h1>A Flying Start in HTML and CSS</h1>
+
+
+			<p>
+	Although there are many things like "Wix" and "Square Space" to help you make a simple 
+	website, sooner of later, as you add complexity, you will have to use bits 
+	of HTML, CSS and Javascript, the languages that "Wix" and "Square Space" etc. 
+	will always turn your web-pages into anyway.
+			</p>
+
+			<p>
+	To start in these languages is a lot easier than it sounds and although at first it may not be as seductive as "Wix" or "Square Space" 
+	you will find that for a little bit of extra work at the beginning you save a lot of work at the end.
+			</p>
+
+
+
+
+			<h2>Teaching Method</h2>
+			<p>
+	The; 
+			</p>
+
+			<ol>                                               <!--This starts an Ordered List block-->
+				<li>Hyper Text Mark-up Language (HTML),</li>     <!--The first thing on the list-->
+				<li>Cascading Style Sheets (CSS), and</li>       <!--The second thing on the list-->
+				<li>Javascript</li>                              <!--The third thing on the list-->
+			</ol>                                              <!--This ends an Ordered List block-->
+
+			<p>
+	files for this web-page are specially created so as to be clear and so as to serve as the material from which we will start to learn. 
+			</p><p>
+	We are going to take these three files and make changes to them and see the effects of those changes.
+	 		</p><p>
+	By changing the text and the image to be your own you will start to create your own web-page. 
+			</p><p>
+	To start in these languages is a lot easier than it sounds and although at first it may not be as seductive as "Wix" or "Square Space" you will find that for a little bit of extra work at the beginning you save a lot of work at the end.
+			</p><p>
+	The HTML for this page is contained in a file called "index.html".
+			</p><p>
+	There is a second file calles "style.css" which determines the layout style of this page.
+			</p><p>
+	Both files are intended for you to look at and learn from. There is no Javascript for this page.
+			</p>
+
+
+
+
+		<h2>The History of HTML</h2>
+		<p>
+The internet its self existed before web-pages and was just a way for computers to be networked between organisations.
+		</p>
+<!--The paragraph below has an image contained in it. The CSS file determines exactly how such an image will marry with the text-->
+		<p>
+			<img src="images/tim-berners-lee.jpg" alt="photo of Tim Berners Lee"/>
+In 1980, physicist Tim Berners-Lee at CERN, proposed a digital document sharing system. 
+		</p><p>
+A system so that documents held on various computer systems "servers" could be read on various other computer systems "clients" using special programs called "browsers". In principle the servers and browsers could be anywhere in the world.
+		</p><p>
+The first objective was that documents could be read on lots of different computer terminals or printed out on different format printers but still remain intelligible. This objective that HTML pages can be browsed on lots of different devices with different formats, remains with us today. 
+		</p><p>
+A second objecting was that references to other documents could be made within the text, and that these references could be simply followed to look at those other documents. These are the links that we normally click on to go to another web-page. The other document or web-page (the same thing really) could be served by the same computer or served by another computer somewhere else in the world. So one could form a web of linked documents, hence the name World Wide Web (WWW). 
+		</p><p>
+This ability for a document to link to link to another document was called "Hyper Text". 
+		</p><p>
+In order for the documents to be able to be browsed on many different systems they needed all to be written in a special "Mark-up Language", this is a language that in the old days of the printing press told the printer where to use headings and that sort of thing i.e. how to lay out the pages in the final print.
+		</p><p>
+Hence the name "Hyper Text Mark-up Language" or just HTML. 
+		</p><p>
+In order for the server computers to communicate with the browsers on the client computers, Tim Berners-Lee defined a protocol called Hyper "Text Transfer Protocol" or HTTP.  
+		</p><p>
+Here is a link with more <a href="https://madeupinbritain.uk/WorldWideWeb">about Tim Berners-Lee</a>. Back in the days of green screen terminals, the link would have had a number next to it but today you can just click on the link to go to the other web-page / HTML document.
+		</p><p>
+Here is a link to <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">one of the original WWW project pages at CERN</a>. 
+		</p><p>
+You don't need to read the linked pages for this tutorial but they might just be interesting because they tell you about the history.
+		</p><p>
+At that time there was no CSS there was only HTML. The idea of a choice of typefaces (fonts) was not considered because very few devices had more than one font.
+		</p>
+
+
+
+
+			<ul>   <!--This starts an Unordered List block. I have spaced out the things in the list-->
+
+				<li>   <!--The first thing on the list, as you can see contains a link as well as text-->
+	Click this link to see how this web-page might have 
+	looked then <a  href="indexgreen.html">on a green screen terminal</a> using just 
+	the HTML file. I have used a bit of CSS and a different font to produce 
+	this retro style.
+				</li>
+
+				<li>   <!--The second thing on the list is similar-->
+	Click this link to see how this web-page might have looked 
+	some years later <a  href="indexatari.html">on an Atari home computer</a> using 
+	just the HTML file and assuming there even was a browser written for it. 
+	Again I have used a bit of CSS and a different font to produce this retro style.
+				</li>
+
+				<li>   <!--The third thing on the list is similar-->
+	Click this link to see how this web-page looks on your 
+	browser <a  href="indexnocss.html">without a CSS file</a> i.e. without 
+	the style information. The browser uses its default styles.
+				</li>
+
+				<li>   <!--The forth thing on the list is similar-->
+	<b>Click this link to see how this web-page looks on your 
+	browser <a  href="index.html">with a decent CSS file</a> designed
+	to make it look half decent. This is the CSS file we will develop our website from</b>.
+				</li>
+
+			</ul>   <!--This ends an Ordered List block-->
+
+
+
+
+		<p>
+In the early days even text styles like <b>bold text</b>, <i>italic text</i> and <u>underlined text</u> were luxuries most browsers did not have. Now these styles can be combined such as <b><i>bold italic text</i></b> or <b><i><u>bold italic underline text</u></i></b> or in any other way you want.
+		</p>
+
+
+
+
+		<h2>The Home Page</h2>
+		<p>
+As I have said, a single HTML document is the same thing as a single HTML page or web-page and is a single HTML file on the computer.
+		</p><p>
+A web-site consists of a number of web-pages and so a number of HTML files on the computer.
+		</p><p>
+Every website has a "home page" which is always a file called "index.html". It is the opening page of the web-site. 
+The index.html page originally was the index to what a site had to offer and that convention has remained.
+		</p>
+
+
+
+
+	</body><!--Marks the end of the body block-->
+
+
+
+
+</html><!--Marks the end of the html block-->
+
+

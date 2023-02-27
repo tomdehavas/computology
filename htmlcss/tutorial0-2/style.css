@@ -1,0 +1,193 @@
+/******************************************************************************
+* Here are the top level styles that 
+* cover everything we do.
+*
+*
+*/
+
+
+/*
+Here using the universal selector * we define every html block as having this 
+style by default, unless something else later in this file overrides it.
+Defining a sort of base style means we know where we are and don't get lumbered
+with the browser's default styles.    
+*/
+
+*
+	{
+	display: block;
+	position: static;
+	padding: 0;
+	border: 0px solid green;
+	border-radius: 0px;
+	margin: 0;
+	color: #888;	
+	background: #fff;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	font-size:1em;
+	letter-spacing: 0em;
+	line-height: 1.5em;
+	}
+
+head {display: none;}
+
+
+body
+	{
+	/*margin: 4em 4em 4em 4em; LOOK removed this*/
+	}
+
+
+
+
+/***************************************
+* Below are all the heading styles
+*/
+
+
+h1, h2, h3, h4, h5, h6 {font-weight: bold; color: #388;line-height:normal; font-weight:normal;}
+h1 {margin:1em 0 0.5em 0; font-size:2em;text-transform: uppercase;letter-spacing: 0.1em;}
+h2 {margin:1em 0 0.5em 0; font-size:1.8em;letter-spacing: 0.1em;}
+h3 {margin:1em 0 0.5em 0; font-size:1.6em;}
+h4 {margin:1em 0 0.5em 0; font-size:1.4em;}
+h5 {margin:1em 0 0.5em 0; font-size:1.2em;}
+h6 {margin:0 0 12px 0; font-size:1em;}
+
+
+p {margin: 0.5em 0 0.5em 0;}
+
+
+
+
+/***************************************
+* Inline text styles
+*/
+
+
+i {display: inline; font-style: italic; color:inherit; background: inherit;}
+
+b {display: inline; font-weight: bold; color:inherit; background: inherit;}
+
+u {display: inline; text-decoration: underline; color:inherit; background: inherit;}
+
+
+
+
+/***************************************
+* HTML link styles
+*/
+	
+
+a
+	{
+	display: inline;
+	color: #08f;
+	text-decoration: none;
+	}
+
+
+a:visited
+	{
+	color: #00f;
+	text-decoration: underline;
+	}
+
+
+a:hover
+	{
+	color: #0f0;
+	text-decoration: underline;
+	}
+
+
+
+
+/***************************************
+* Below are all the list styles
+*/
+
+
+ul
+	{
+	margin: 0.5em 0 0.5em 4em;
+	list-style-type: disc;
+	}
+
+
+ol
+	{
+	margin: 0.5em 0 0.5em 4em;
+	list-style-type: arabic-numbers;
+	}
+
+
+li {display: list-item;}
+
+
+
+
+/***************************************
+* Below are all the image styles
+*/
+
+
+p img
+	{
+	float: left;
+	padding: 0;
+	border: 0px solid black;
+	margin: 1em 1.5em 0.5em 0;
+	width: 200px;
+	}
+
+
+
+
+/******************************************************************************
+* Header, Page, Text and Footer Box <div>
+*
+* These are styles for the divisions we have chosen to create.
+*/
+
+
+/*Added in Tutorial 0-1: First use of div*/
+#HeaderBox /*Style for the <div> of id "HeaderBox"*/
+	{ 
+	/*padding: 1.2em 1.2em 1.2em 1.4em;  Defines the space to be left around the text, before the border*/
+	  padding: 1.2em 1.2em 1.2em 2.4em;  /*LOOK shifted right to line up page title*/
+
+	color: #fff;
+	background: #345;
+	background-image: url("images/banner2.jpg");  
+	background-repeat:no-repeat; background-position: center;
+
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 3em; 
+	font-stretch: 100%;
+	letter-spacing: 0.3em;
+	line-height: 1em;
+	}
+
+
+#PageBox /*LOOK Added Style for the <div> of id "PageBox"*/
+	{
+  display: block; /*A flex container expands items to fill available free space or shrinks them to prevent line overflow.*/
+	position: relative; /*Essential line for z-index to work!!*/
+	z-index: 970; /*Determines what is on top of what*/
+	margin: 4em 8em 8em 8em;
+	}
+
+
+
+
+
+
+
+
+
+
