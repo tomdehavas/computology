@@ -1,2 +1,2 @@
 # computology
-Computology.org is a website intended to provide some entry point into computing.
+Computology.org is a website intended to provide some entry point into computing but also as a place to keep my own notes when I have found out stuff I really would like to remember. It is truely a bit of a mess but seems to have attracted googles attention enough to be notices. Despite a long programming career (First programmed about 1978) I have not used GitHub before and so this is my first experience of it. Apologies for the messes I am likely to make. All comments welcome. "Praise is good for my ego but critisism is good for my business" so plenty of the latter please.   
