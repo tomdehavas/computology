@@ -1,0 +1,309 @@
+/***************************************
+* Fonts from files used in website. 
+*
+* Added in tutorial 0-5 also
+*   font-family: sans-serif;
+* must be replaced by
+*   font-family: 'mainFont', sans-serif;
+*
+@font-face is not a normal style definition block because rather than define
+the style to use for particular tags in the HTML file it defines a "font-family" 
+that will be referenced by other style definition blocks later on.
+In this case we are defining a "font-family" we are naming "mainFont" as
+the True Type Font (ttf) defined in a file at "fonts/Quicksand-Regular.ttf"
+and telling the browser that the ttf file defines a font of normal weight and style'
+if necessary.*/
+@font-face 
+	{
+	font-family: "mainFont";
+	src: local("Quicksand-Regular.ttf"), url(fonts/Quicksand-Regular.ttf) format("truetype");
+/*	font-weight: normal;
+	font-style: normal;*/
+	}
+	/*LOOK use the new font*/
+
+
+
+/******************************************************************************
+* Here are the top level styles that 
+* cover everything we do.
+*
+*
+*/
+
+
+/*
+Here using the universal selector * we define every html block as having this 
+style by default, unless something else later in this file overrides it.
+Defining a sort of base style means we know where we are and don't get lumbered
+with the browser's default styles.    
+*/
+
+*
+	{
+	display: block;
+	position: static;
+	padding: 0;
+	border: 0px solid green;
+	border-radius: 0px;
+	margin: 0;
+	color: #888;	
+	background: #fff;
+	font-family: 'mainFont', sans-serif; /*LOOK use the new font*/
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	font-size:1em;
+	letter-spacing: 0em;
+	line-height: 1.5em;
+	}
+
+head {display: none;}
+
+
+body
+	{
+	/*margin: 4em 4em 4em 4em; LOOK removed this*/
+	}
+
+
+
+
+/***************************************
+* Below are all the heading styles
+*/
+
+
+h1, h2, h3, h4, h5, h6 {font-weight: bold; color: #388;line-height:normal; font-weight:normal;}
+h1 {margin:1em 0 0.5em 0; font-size:2em;text-transform: uppercase;letter-spacing: 0.1em;}
+h2 {margin:1em 0 0.5em 0; font-size:1.8em;letter-spacing: 0.1em;}
+h3 {margin:1em 0 0.5em 0; font-size:1.6em;}
+h4 {margin:1em 0 0.5em 0; font-size:1.4em;}
+h5 {margin:1em 0 0.5em 0; font-size:1.2em;}
+h6 {margin:0 0 12px 0; font-size:1em;}
+
+
+p {margin: 0.5em 0 0.5em 0;}
+
+
+
+
+/***************************************
+* Inline text styles
+*/
+
+
+i {display: inline; font-style: italic; color:inherit; background: inherit;}
+
+b {display: inline; font-weight: bold; color:inherit; background: inherit;}
+
+u {display: inline; text-decoration: underline; color:inherit; background: inherit;}
+
+
+
+
+/***************************************
+* HTML link styles
+*/
+	
+
+a
+	{
+	display: inline;
+	color: #08f;
+	text-decoration: none;
+	}
+
+
+a:visited
+	{
+	color: #00f;
+	text-decoration: underline;
+	}
+
+
+a:hover
+	{
+	color: #0f0;
+	text-decoration: underline;
+	}
+
+
+
+
+/***************************************
+* Below are all the list styles
+*/
+
+
+ul
+	{
+	margin: 0.5em 0 0.5em 4em;
+	list-style-type: disc;
+	}
+
+
+ol
+	{
+	margin: 0.5em 0 0.5em 4em;
+	list-style-type: arabic-numbers;
+	}
+
+
+li {display: list-item;}
+
+
+
+
+/***************************************
+* Below are all the image styles
+*/
+
+
+p img
+	{
+	float: left;
+	padding: 0;
+	border: 0px solid black;
+	margin: 1em 1.5em 0.5em 0;
+	width: 200px;
+	}
+
+
+
+
+/******************************************************************************
+* Header, Page, Text and Footer Box <div>
+*
+* These are styles for the divisions we have chosen to create.
+*/
+
+
+#HeaderBox
+	{ 
+	padding: 1.2em 1.2em 1.2em 2.4em;
+
+	color: #fff;
+	background: #345;
+	background-image: url("images/banner2.jpg");  
+	background-repeat:no-repeat; background-position: center;
+
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 3em; 
+	font-stretch: 100%;
+	letter-spacing: 0.3em;
+	line-height: 1em;
+	font-family: 'mainFont', sans-serif; /*LOOK use the new font*/
+	}
+
+
+#PageBox
+	{
+  display: block;
+	position: relative;
+	z-index: 970;
+	margin: 4em 8em 8em 8em;
+	}
+
+
+
+
+/*LOOK When we add the footer*/
+#FooterBox  /*Style for the <div> of id "FooterBox"*/
+	{ 
+	position: relative; /*Essential line for z-index to work!!*/
+	padding: 50px;
+	margin: 0px;
+	color: #fff;
+	background: #345;
+	z-index: 990; /*Determines what is on top of what*/
+	}
+
+#FooterBox p {color: #fff;background: #345;}
+
+#FooterBox ul {list-style-type: none;}
+#FooterBox li {color: #fff;background: #345;}
+
+#FooterBox img
+	{ 
+	display: inline;
+	margin: 5px 10px -5px 5px;
+	color: #fff;
+	background: #345;
+	}
+
+
+
+
+/******************************************************************************
+* TopMenu styles
+*
+* The list and link styles are handled differently in the TopMenu so they are
+* overlaid below.
+*/
+
+
+#TopMenuBox
+	{ 
+	position: sticky;
+  position: -webkit-sticky; /*Just for the Mac*/
+	top: 0px;
+	z-index: 990; /*Determines what is on top of what A position: is essential line for z-index to work!!*/
+	
+	padding: 0 6em 0 6em; /*The body margins are 8em
+	but there is also the padding of each link of 2em to consider, to get the HOME item
+	to line up with the body text*/
+
+	color: #fff;
+	background: #345;
+	width: 100%; /*Cross the entire browser window*/
+	}
+
+
+/*Overlay the base link styles because we want the TopMenu to 
+handle normal, visited and hover differently.*/
+#TopMenuBox a {color: #fff;transition: color 0.5s;font-weight: bold;text-transform:uppercase;}
+#TopMenuBox a:visited {color: #ddd;text-decoration: none;}
+#TopMenuBox a:hover {color: #0f0;text-decoration: none;}
+
+
+#TopMenuBox ul 
+	{
+	margin: 0; /*To override the normal ul style which has a margin*/
+
+	width: 100%;
+	height: auto;
+
+	color: #fff;
+	background: #345;
+  list-style: none;
+	}
+
+#TopMenuBox ul>li 
+	{
+	display: inline-block;  /*inline makes this type of element wrap like text but block
+	makes sure that it isn't only about wrapping the text in the element but the whole li block.*/
+	position: relative; /*This element and it's sub-element’s positions are relative to the flow of the document*/
+
+	padding: 1em 0em 1em 0em;
+
+  background: #345;
+	}
+
+
+  
+#TopMenuBox ul>li>a 
+	{
+	padding: 1em 2em 1em 2em;
+
+	color: #fff;
+	background: #345;
+	}
+
+
+
+
+
+
