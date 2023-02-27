@@ -1,0 +1,222 @@
+/* 
+In a CSS file you can write things that the browser totally ignores. 
+These are called "comments" and are purely for humans.
+
+In a CSS file a comment starts with these characters / *
+and ends with these characters * /
+
+Look at the start and end of this comment to see how its done.
+
+This CSS file is well commented so as 
+to explain everything for your benefit.
+
+If you removed all the comments, the final rendered page would not change at all.
+
+Another IMPORTANT point is that "white space" that means spaces and new lines that you 
+put in a CSS file don't normally effect what appears in the browser at all.
+*/
+
+/*
+CSS is mainly composed of style definitions contained between { and }.
+Before each style definition appears the "selector" to say to which HTML 
+"tags" the style should be applied.
+*/ 
+
+
+
+
+/***************************************
+* Fonts from files used in website. 
+*/
+
+
+/*@font-face is not a normal style definition block because rather than define
+the style to use for particular tags in the HTML file it defines a "font-family" 
+that will be referenced by other style definition blocks later on.
+In this case we are defining a "font-family" we are naming "mainFont" as
+the True Type Font (ttf) defined in a file at "fonts/Quicksand-Regular.ttf"
+and telling the browser that the ttf file defines a font of normal weight and style'
+if necessary.*/
+@font-face 
+	{
+	font-family: "mainFont";
+  src: url(fonts/AtariST8x16SystemFont.ttf) format("truetype");
+/*	font-weight: normal;
+	font-style: normal;*/
+	}
+
+
+
+
+/******************************************************************************
+* Here are the top level styles that 
+* cover everything we do.
+*
+*
+*/
+
+
+/*
+Here using the universal selector * we define every html block as having this 
+style by default, unless something else later in this file overrides it.
+Defining a sort of base style means we know where we are and don't get lumbered
+with the browser's default styles.    
+*/
+
+*
+	{
+	/*First I like to define the layout, how and where a block will be displayed.*/
+
+	/*display: block; is usually used for container elements, like <div>, <section>, 
+	and <ul>. Also text “blocks” like <p> and <h1>, <h2> etc. Block level elements 
+	do not sit inline. By default (without setting a width) they take up as much 
+	of the line as they can.*/
+	display: block;
+
+ /*Static position means that the block will appear after the last block in the flow of the document*/ 
+	position: static;
+
+	/*Second any width and height*/
+
+	/*Third I like to define the framing stuff. The units em and px are explained below*/
+	padding: 0;              /*Defines the space to be left before the border (it will be filled with background color).*/
+	border: 0px solid green;   /*Defines the border thickness style and color. Changing 0px to 2px let's you see where all the borders are*/
+	border-radius: 0px;        /*Makes rounded corners if you want them*/
+	margin: 0;               /*Defines the margin to be left outside the border (it is always transparent).*/
+
+	/*Fourth I like to define the color stuff*/
+	color: #000;
+	background: #d0d0e8;
+
+	/*Fifth I like to define the font stuff*/
+	font-family: 'mainFont', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	font-size:32px;
+	letter-spacing: 0em;
+	line-height: 1.2em;
+
+	/*I just happen to like this order of doing things*/
+	}
+
+	/*The numbers in padding: or margin: go TOP RIGHT BOTTOM LEFT, four numbers.
+	  If the TOP=BOTTOM and RIGHT=LEFT then you can put just two numbers.
+	  If the TOP=BOTTOM=RIGHT=LEFT then you can put just one number.
+	*/
+
+	/*The possible units of measure are;
+		px = pixels
+		pt = points 1/72 of an inch
+		em = relative to the font size so 2em means twice the font size
+		there are others. See https://www.w3schools.com/cssref/css_units.asp
+		for the full list
+		if you are putting 0 you don't need to put a unit of measure.
+	*/
+
+
+/*The head and script blocks should not be desplayed*/ 
+head, script {display: none;}
+
+
+/* This defines the style for the "body" of the html which is the main container of what we see.*/
+body
+	{
+	margin: 2em 2em 2em 2em;
+	}
+
+
+
+
+
+/***************************************
+* Below are all the heading styles
+*/
+
+
+h1, h2, h3, h4, h5, h6 {margin:1em 0 0em 0;}
+h1 {text-transform: uppercase;text-decoration: underline;}
+h2 {text-decoration: underline;}
+h3 {}
+
+
+/*The style for paragraphs <p>blah blah blah</p> in the html file*/
+p {margin: 0em 0 1em 0;}
+
+
+
+
+/***************************************
+* Inline text styles
+*/
+
+
+/*display: inline; puts the element in the flow of the document*/
+
+i /*Generally used inside paragraphs, this defines anything between <i> and </i> as being in italic*/
+	{display: inline; font-style: italic; color:inherit; background: inherit;}
+
+b  /*Generally used inside paragraphs, this defines anything between <b> and </b> as being in bold*/
+	{display: inline; font-weight: bold; color:inherit; background: inherit;}
+
+u  /*Generally used inside paragraphs, this defines anything between <u> and </u> as being underlined*/
+	{display: inline; text-decoration: underline; color:inherit; background: inherit;}
+
+
+
+
+/***************************************
+* HTML link styles
+*/
+	
+
+/*These are the basic link style*/
+a
+	{
+	display: inline; /*This block type will be wrapped as part of the line (of text and stuff) they appear in.*/
+	text-decoration: underline;
+	font-style: italic;
+	}
+
+
+
+/***************************************
+* Below are all the list styles
+*/
+
+
+/*The style for unordered lists*/
+ul
+	{
+	margin: 0.5em 0 0.5em 4em;
+	list-style-type: disc;
+	}
+
+
+/*The style for ordered lists*/
+ol
+	{
+	margin: 0.5em 0 0.5em 4em;
+	list-style-type: arabic-numbers;
+	}
+
+
+/*The element generates a block box for the content and a separate list-item inline box.TODO*/
+li {display: list-item;}
+
+
+
+
+/***************************************
+* Below are all the image styles
+*/
+
+
+p img /*This defines the image style for images <img  > that are contained inside paragraphs <p> </p>*/
+	{
+	display: none;
+	}
+
+
+
+

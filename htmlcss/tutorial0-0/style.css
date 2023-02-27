@@ -1,0 +1,255 @@
+/* 
+In a CSS file you can write things that the browser totally ignores. 
+These are called "comments" and are purely for humans.
+
+In a CSS file a comment starts with these characters / *
+and ends with these characters * /
+
+Look at the start and end of this comment to see how its done.
+
+This CSS file is well commented so as 
+to explain everything for your benefit.
+
+If you removed all the comments, the final rendered page would not change at all.
+
+Another IMPORTANT point is that "white space" that means spaces and new lines that you 
+put in a CSS file don't normally effect what appears in the browser at all.
+*/
+
+/*
+CSS is mainly composed of style definitions contained between { and }.
+Before each style definition appears the "selector" to say to which HTML 
+"tags" the style should be applied.
+*/ 
+
+
+
+
+/******************************************************************************
+* Here are the top level styles that 
+* cover everything we do.
+*
+*
+*/
+
+
+/*
+Here using the universal selector * we define every html block as having this 
+style by default, unless something else later in this file overrides it.
+Defining a sort of base style means we know where we are and don't get lumbered
+with the browser's default styles.    
+*/
+
+*
+	{
+	/*First I like to define the layout, how and where a block will be displayed.*/
+
+	/*display: block; is usually used for container elements, like <div>, <section>, 
+	and <ul>. Also text “blocks” like <p> and <h1>, <h2> etc. Block level elements 
+	do not sit inline. By default (without setting a width) they take up as much 
+	of the line as they can.*/
+	display: block;
+
+ /*Static position means that the block will appear after the last block in the flow of the document*/ 
+	position: static;
+
+	/*Second any width and height*/
+
+	/*Third I like to define the framing stuff. The units em and px are explained below*/
+	padding: 0;              /*Defines the space to be left before the border (it will be filled with background color).*/
+	border: 0px solid green;   /*Defines the border thickness style and color. Changing 0px to 2px let's you see where all the borders are*/
+	border-radius: 0px;        /*Makes rounded corners if you want them*/
+	margin: 0;               /*Defines the margin to be left outside the border (it is always transparent).*/
+
+	/*Fourth I like to define the color stuff*/
+	color: #888;	
+	background: #fff;
+
+	/*Fifth I like to define the font stuff*/
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	font-size:1em;
+	letter-spacing: 0em;
+	line-height: 1.5em;
+
+	/*I just happen to like this order of doing things*/
+	}
+
+	/*The numbers in padding: or margin: go TOP RIGHT BOTTOM LEFT, four numbers.
+	  If the TOP=BOTTOM and RIGHT=LEFT then you can put just two numbers.
+	  If the TOP=BOTTOM=RIGHT=LEFT then you can put just one number.
+	*/
+
+	/*The possible units of measure are;
+		px = pixels
+		pt = points 1/72 of an inch
+		em = relative to the font size so 2em means twice the font size
+		there are others. See https://www.w3schools.com/cssref/css_units.asp
+		for the full list
+		if you are putting 0 you don't need to put a unit of measure.
+	*/
+
+
+/*The head and script blocks should not be desplayed*/ 
+head {display: none;}
+
+
+/* This defines the style for the "body" of the html which is the main container of what we see.*/
+body
+	{
+	margin: 4em 4em 4em 4em;
+
+	color: #888;
+
+	/*Colors can be specified in many different ways.*/
+	/*All these background statements do the same thing. The last one is the one that will actually be effective
+	as in CSS statements about a particular thing overwrite previous statements about the same thing and only the last one applies.
+	You can re-arrange them to make another the last, and then fiddle with the perimeters to change the color.
+  don't worry about understanding these completely, you can use which ever you prefer*/
+	background: #fff;                  /*The color is defined by the three base 16 digits 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f */ 
+	background: #ffffff;               /*The color is defined by the three two digit base 16 numbers in decimal they go from 0 = 00 to 255 = ff*/
+	background: rgb(255,255,255);      /*The color is defined by the three decimal numbers from 0 to 255*/
+	background: rgb(255,255,255,1.0);  /*The color is defined by the three decimal numbers from 0 to 255 and an opacity between 0=transparent and 1=opaque*/
+	background: Cornsilk;                 /*The color is defined by a name, more color names can be found, google "css colors".*/
+	background: white;
+	}
+
+
+
+
+/***************************************
+* Below are all the heading styles
+*/
+
+
+h1, h2, h3, h4, h5, h6 {font-weight: bold; color: #388;line-height:normal; font-weight:normal;}
+h1 {margin:1em 0 0.5em 0; font-size:2em;text-transform: uppercase;letter-spacing: 0.1em;}
+h2 {margin:1em 0 0.5em 0; font-size:1.8em;letter-spacing: 0.1em;}
+h3 {margin:1em 0 0.5em 0; font-size:1.6em;}
+h4 {margin:1em 0 0.5em 0; font-size:1.4em;}
+h5 {margin:1em 0 0.5em 0; font-size:1.2em;}
+h6 {margin:0 0 12px 0; font-size:1em;}
+
+
+/*The style for paragraphs <p>blah blah blah</p> in the html file*/
+p {margin: 0.5em 0 0.5em 0;}
+
+
+
+
+/***************************************
+* Inline text styles
+*/
+
+
+/*display: inline; puts the element in the flow of the document*/
+
+i /*Generally used inside paragraphs, this defines anything between <i> and </i> as being in italic*/
+	{display: inline; font-style: italic; color:inherit; background: inherit;}
+
+b  /*Generally used inside paragraphs, this defines anything between <b> and </b> as being in bold*/
+	{display: inline; font-weight: bold; color:inherit; background: inherit;}
+
+u  /*Generally used inside paragraphs, this defines anything between <u> and </u> as being underlined*/
+	{display: inline; text-decoration: underline; color:inherit; background: inherit;}
+
+
+
+
+/***************************************
+* HTML link styles
+*/
+	
+
+/*These are the basic link style*/
+a
+	{
+	display: inline; /*This block type will be wrapped as part of the line (of text and stuff) they appear in.*/
+	color: #08f;
+	text-decoration: none;
+	}
+
+
+/*Once a page has been visited the basic link style will be overlaid with this style*/
+a:visited
+	{
+	color: #00f;
+	text-decoration: underline;
+	}
+
+
+/*When the mouse hovers over a link the basic link style will be overlaid with this style*/
+a:hover
+	{
+	color: #0f0;
+	text-decoration: underline;
+	}
+
+
+
+
+/***************************************
+* Below are all the list styles
+*/
+
+
+/*The style for unordered lists*/
+ul
+	{
+	margin: 0.5em 0 0.5em 4em;
+
+	/*A selection of bullets are possible*/
+	list-style-type: disc;
+	/*list-style-type: circle;*/
+	/*list-style-type: square;*/
+	/*list-style-image: url(image.png);*/
+	}
+
+
+/*The style for ordered lists*/
+ol
+	{
+	margin: 0.5em 0 0.5em 4em;
+
+	/*A selection of number/letter styles are possible*/
+	/*list-style-type: upper-alpha;*/
+	/*list-style-type: lower-alpha;*/
+	/*list-style-type: upper-roman;*/
+	/*list-style-type: lower-roman;*/
+	list-style-type: arabic-numbers;
+	}
+
+
+/*The element generates a block box for the content and a separate list-item inline box.TODO*/
+li {display: list-item;}
+
+
+
+
+/***************************************
+* Below are all the image styles
+*/
+
+
+p img /*This defines the image style for images <img  > that are contained inside paragraphs <p> </p>*/
+	{
+	float: left;                   /*The image will be in the text and float to the left*/ 
+	padding: 0;                    /*Defines the space to be left before the border*/
+	border: 0px solid black;       /*Defines the border*/
+	margin: 1em 1.5em 0.5em 0;     /*Defines the space to be left before the edge*/
+	width: 200px;                  /*The image will be scaled to a width of 200px*/
+	}
+
+
+
+
+
+
+
+
+
+
+
+
